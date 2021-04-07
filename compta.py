@@ -242,12 +242,14 @@ for mois in range(1,13):
 		facture.setNoPiece(numero)
 		numero += 1
 
+#Analyse des fichiers
 #with open("analyse.txt", "w", encoding='windows-1252') as fichier_analyse :
 with open("analyse KO.txt", "w", encoding='latin-1') as fichier_analyse :
 	for f in liste_factures_clients :
 		if str(f) != "" :
 			fichier_analyse.write(str(f) + "\n")
 
+# Génération des écritures de compta
 for mois in range(1,13):
 	non_fichier = "ecritures" + f"{mois:02d}" + ".csv"
 	#with open(non_fichier, "w", encoding='windows-1252') as ecritures:
